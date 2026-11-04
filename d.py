@@ -21,7 +21,7 @@ vegita = Fighter("ベジータ", 1000, 80, 100)
 
 gokuu.attack = gokuu.super_saiyan()
 
-print("悟空はスーパーサイヤ人に変身した! 攻撃力:" + str(gokuu.attack))
+print(str(gokuu.name) + "はスーパーサイヤ人に変身した! 攻撃力:" + str(gokuu.attack))
 
 turn = 1
 while True:
@@ -31,14 +31,14 @@ while True:
 
     # 悟空の攻撃のすぐ後で相手のHPを調べます
     if vegita.hp <= 0:
-        print("ベジータは倒れた! 悟空の勝利!")
+        print(str(vegita.name) + "は倒れた! " + str(gokuu.name) + "の勝利!")
         break
 
     vegita.punch(gokuu)
 
     # ベジータの攻撃のすぐ後で相手のHPを調べます
     if gokuu.hp <= 0:
-        print("悟空は倒れた! ベジータの勝利!")
+        print(str(gokuu.name) + "は倒れた! " + str(vegita.name) + "の勝利!")
         break
 
     turn += 1
