@@ -26,11 +26,11 @@ class Guitar:
 
 
 def find_recommendations(guitars, genre, brand):
-    recommendation = []
+    recommendations = []
     for guitar in guitars:
         if guitar.match(genre, brand):
-            recommendation.append(guitar)
-    return recommendation
+            recommendations.append(guitar)
+    return recommendations
 
 
 genre_answer = input("好きな音楽のジャンルは：")
@@ -43,10 +43,10 @@ es_335 = Guitar("ES-335", "R&B", "Gibson")
 
 guitars = [stratocaster, telecaster, les_paul, es_335]
 
-recommendation = find_recommendations(guitars, genre_answer, brand_answer)
+recommendations = find_recommendations(guitars, genre_answer, brand_answer)
 
-if recommendation:
-    for guitar in recommendation:
+if recommendations:
+    for guitar in recommendations:
         print(f"{guitar.name}がおすすめです！")
 else:
     print("おとといきやがれ！")
